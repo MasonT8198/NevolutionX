@@ -12,6 +12,7 @@ void settingsMenu::init() {
   addNode(std::make_shared<LangMenu>(this, "Language select"));
   addNode(std::make_shared<TimeMenu>(this, "Timezone select"));
   addNode(std::make_shared<MenuExec>("Wipe cache partitions", [](Menu *){
+  addNode(std::make_shared<VideoMenu>(this, "Video settings"));
     wipe_cache();
   }));
 }
